@@ -1,0 +1,66 @@
+{
+  "contacts": [
+    {
+      "id": "2",
+      "name": "Goku",
+      "email": "dragonballz@gmail.com",
+      "mobile": "8652652495",
+      "photo": "https://pbs.twimg.com/profile_images/1366466342354751491/JyhZpbtu_400x400.jpg",
+      "company": "Roshi Island",
+      "title": "Saiyan",
+      "groupId": "2"
+    },
+    {
+      "id": "3",
+      "name": "Uchiha Sasuke",
+      "photo": "https://i1.sndcdn.com/avatars-WGz92y1Bty86phdv-zduzjA-t500x500.jpg",
+      "mobile": "54541955859",
+      "email": "narutoshippuden@yahoo.com",
+      "company": "Leaf Village",
+      "title": "Shinobi",
+      "groupId": "5"
+    },
+    {
+      "name": "Naruto",
+      "photo": "https://awsimages.detik.net.id/community/media/visual/2020/07/13/manga-naruto-1_43.webp?w=1200",
+      "mobile": "98425298598",
+      "email": "narutoshippuden@yahoo.com",
+      "company": "Leaf Village",
+      "title": "Hokage",
+      "groupId": "2",
+      "id": "4"
+    },
+    {
+      "id": "6",
+      "photo": "https://diak46rl5chc7.cloudfront.net/orgs/126362/contents/ujhfmi76xrs8nbkv/ujhfmi76xrs8nbkv.png",
+      "name": "Izuku Midoriya",
+      "mobile": "87678987698",
+      "email": "heroacademia@hotmail.com",
+      "company": "U.A. High  School",
+      "title": "All for One",
+      "groupId": "1"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "Colleague"
+    },
+    {
+      "id": "2",
+      "name": "Famliy"
+    },
+    {
+      "id": "3",
+      "name": "Classmate"
+    },
+    {
+      "id": "4",
+      "name": "Avenger"
+    },
+    {
+      "id": "5",
+      "name": "Friend"
+    }
+  ]
+}

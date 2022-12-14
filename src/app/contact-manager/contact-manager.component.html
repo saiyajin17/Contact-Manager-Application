@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row mt-4">
+        <div class="col">
+            <p class="h3">Contact Manager
+                <a href="/contacts/add" class="btn btn-success btn-sm">
+                    <i class="fa fa-plus-circle">&nbsp;</i> New Contact
+                </a>
+            </p>
+            <p class="fst-italic mt-1">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum deserunt praesentium rem ab, aliquam
+                numquam aspernatur quis. Voluptatem dolor quos laborum unde dignissimos est voluptatibus odit quia. Unde
+                alias expedita aspernatur eius dicta distinctio placeat tempora. Doloribus sed quos, ipsa provident quod
+                quae? Fugiat fuga voluptatem neque expedita ducimus magni.
+            </p>
+            <form action="">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input  [(ngModel)]="searchContact" name="searchContact"
+                         type="text" class="form-control" placeholder="search contact">
+                    </div>
+                    <div class="col-md-6">
+                        <input (click)="searchContacts(searchContact)"
+                        type="submit" class="btn btn-outline-dark" value="search">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- condition based loading -->
+<div *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
+
+<!-- display error message -->
+<div *ngIf="!loading && errorMessage">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h4 text-danger fw-bold">
+                    {{errorMessage}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Card Design -->
+<!-- <pre>{{contacts | json}}</pre> -->
+<div class="container mt-4" *ngIf="!loading&&contacts.length>0">
+    <div class="row">
+        <div class="col-md-6" *ngFor="let contact of contacts">
+            <div class="card list-group-item-dark my-2">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img [src]="contact.photo" alt="asdsad" class="contact-img">
+                        </div>
+                        <div class="col-sm-7">
+                            <ul class="list-group">
+                                <li class="list-group-item">Name: <span class="fw-bold">{{contact.name}}</span></li>
+                                <li class="list-group-item">Email: <span class="fw-bold">{{contact.email}}</span></li>
+                                <li class="list-group-item">Mobile: <span class="fw-bold">{{contact.mobile}}</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
+                            <a routerLink="/contacts/view/{{contact.id}}" class="btn btn-warning mb-1"><i
+                                    class="fa fa-eye"></i></a>
+                            <a routerLink="/contacts/edit/{{contact.id}}" class="btn btn-success mb-1"><i
+                                    class="fa fa-pen"></i></a>
+                            <button (click)="deletingContact(contact.id)" class="btn btn-danger "><i
+                                    class="fa fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
